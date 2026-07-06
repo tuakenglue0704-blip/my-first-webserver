@@ -17,3 +17,10 @@ response.send(`
 </div>
 `);
 });
+// 4. สั่งให้ Server เริ่มทํางาน (Listen) และเปิดประตูรอรับแขก
+// ข้อควรระวัง: บน Render เราต้องใช้พอร์ตที่ระบบกําหนดให้ (process.env.PORT) หรือถ้าไม่มีให้ใช้
+3000
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+console.log(" Web Server สตาร์ทสําเร็จแล้ว! กําลังทํางานที่พอร์ต: " + port);
+});
